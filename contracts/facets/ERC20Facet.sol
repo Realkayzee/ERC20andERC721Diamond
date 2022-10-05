@@ -7,6 +7,8 @@ import {IERC20} from "../interfaces/IERC20.sol";
 import {IERC165} from "../interfaces/IERC165.sol";
 
 contract ERC20Facet is IERC20 {
+
+
     function mint(address _addr) internal {
         LibERC20Storage.ERC20 storage erc20 = LibERC20Storage.ERC20storage();
         erc20.balances[_addr] += erc20.totalSupply;
@@ -65,5 +67,3 @@ contract ERC20Facet is IERC20 {
 
 }
 
-
- 
